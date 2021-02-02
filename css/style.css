@@ -1,0 +1,293 @@
+{
+    padding : 0;
+    margin : 0;
+    font-family : 'Quicksand' sans-serif;
+    color: #333;
+}
+
+header{
+    height: 120px;
+    
+}
+
+header h1 {
+    
+    display : inline-block;
+    float : left;
+    padding : 17px, 24px;
+    text-transform: uppercase;
+}
+
+header h1 a{
+    transition: .3s;
+}
+
+header h1 a:hover{
+    color : #F84744;
+}
+
+header ul li a:hover{
+    transition: .3s;
+}
+
+header ul li a:hover{
+    color : #F84744;
+}
+
+header ul {
+    
+    float : right;
+}
+
+header ul li {
+    
+    padding: 24px;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    
+}
+
+.container::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.mobile-menu {
+    float: right;
+    display: none;
+    padding : 18px;
+    
+}
+
+.mobile-menu:hover{
+    cursor: pointer;
+}
+
+/*jika ID menggunakan #*/
+#check {
+    display: none;
+}
+
+.sidebar{
+    position: fixed;
+    top:10px;
+    bottom: 0;
+    margin: 0;
+    left: -300px;
+    width: 300px;
+    background-color: rgba(16, 47, 80, .9); /* .9 = 0.9 */
+    transition: .3s;
+    z-index: 9999;
+}
+
+.sidebar ul li a{
+    color: #fff;
+}
+
+.sidebar ul li {
+    padding: 24px;
+    transition: .3s;
+    transition-property: background-color;
+}
+
+.sidebar ul li:hover{
+    background-color: #F84744;
+}
+
+section {
+    padding: 50px 0;
+}
+
+#check:checked ~ .sidebar { /* ~ .sidebar = semua element sidebar  left : 0, maka kembali ke kanan */
+    left: 0;
+}
+
+.banner {
+    background-color: #5DE2F4;
+    padding: 50px 0;
+}
+
+.banner img {
+    width: 100px;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px #ddd;
+    margin-bottom: 10px;
+}
+
+.banner h2,
+.banner p,
+.banner span {
+    color: #fff;
+}
+
+.banner h2{
+    margin-bottom: 10px;
+}
+
+.banner p{
+    font-size: 18px;
+}
+
+.banner-left{
+    
+    padding-left: 24px;
+}
+
+/* ABOUT*/
+section h3 {
+    padding-bottom: 20px;
+    
+    text-align: center;
+    margin: 20px;
+    position: relative;
+}
+
+section h3::before{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+    height: 1px;
+    background-color: rgb(112, 40, 40);
+    left: calc(50% - 60px);
+}
+
+section h3::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 60px;
+    height: 5px;
+    background-color: rgb(233, 134, 134);
+    left: calc(50% - 30px);
+}
+
+#about p {
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 25px;
+    margin-bottom: 15px;
+}
+
+/* SKILL */
+#skills {
+    background-color: #ebe5e5b4;
+}
+
+#skills .bar{
+    height: 30px;
+    background-color: rgb(85, 77, 73);
+    border: 1px solid #ddd;
+    margin: 5px 0 20px 0px; /* 5=margin atas 0=margin kiri 20=margin bawah, 0=margin kanan */
+}
+
+.bar .nilai {
+    height: 30px;
+    background-color: #F84744;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+}
+
+.html {
+    width: 80%;
+}
+
+.css {
+    width: 70%;
+}
+
+.js {
+    width: 60%;
+}
+
+.bs {
+    width: 80%;
+}
+
+.php {
+    width: 60%;
+}
+
+
+/* PORTFOLIO */
+.col-4 {
+    width: 25%;
+    box-sizing: 5px;
+    padding: 5px;
+    float: left;
+    text-align: center;
+    font-size: 12px;
+    margin-left: 5%;
+}
+
+.col-4 img{
+    width: 100%;
+}
+
+.col-4 a:hover img {
+    transform: scale(1.2);
+}
+
+ /* CONTACT */
+#contact {
+    background-color: rgba(212, 207, 207, 0.651);
+}
+
+.col-3{
+    width: 33.33%;
+    
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    padding: 30px 5px;
+}
+.col-3 h4{
+    
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(12, 12, 12);
+    margin-bottom: 5px;
+}
+
+/* COPY RIGHT */
+footer {
+    background-color: rgba(92, 88, 88, 0.534);
+    padding: 20px 20px;
+    text-align: center;
+}
+footer small{
+    color: rgb(3, 3, 3);
+}
+
+/* SCROLL DOWN SAAT CLICK */
+html{
+    scroll-behavior: smooth;
+}
+
+/*Membuat responsive menu*/
+/*Jika lebar 900px maka menu mobile ditampilkan dan jika 900 px display menghilang*/
+@media(max-width: 900px) { 
+    .mobile-menu {
+        display: block;
+    }
+    header ul{
+        display: none;
+    }
+    .col-4 {
+        width: 50%;
+    }
+    .col-3{
+        width: 100%;
+    }
+}
